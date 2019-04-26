@@ -19,8 +19,7 @@ class DatabaseManager {
        return Database.database().reference()
     }()
     
-    static func loadArticles(_ valueChanged:@escaping ()->()){
-        
+    static func loadArticles(_ completion:@escaping ()->()){
         ref.child("news").observe(.value) { (snapshot) in
             let articleData = snapshot.value  as? [String:AnyObject] ?? [:]
             
@@ -38,10 +37,22 @@ class DatabaseManager {
                 }
             })
             
-            //callback to change views
-            valueChanged()
+            
+            completion()
         }
     }
     
-    
+    static func getArticleIDs(byCategory category:String) -> [String] {
+        if category == "All" {
+            return articles.sorted {    //sort by date
+                $0.value.creation_date.compare($1.value.creation_date) == .orderedDescending
+                }.map{$0.key}           //get keys
+        }
+        
+        return articles.filter{ //filter by category
+                $0.value.category == category
+            }.sorted{           //sort by date
+                $0.value.creation_date.compare($1.value.creation_date) == .orderedDescending
+            }.map{$0.key}       //get keys
+    }
 }
