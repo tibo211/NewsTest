@@ -19,5 +19,6 @@ class ArticleCell: UITableViewCell {
     func set(withData data:ArticleData) {
         titleLabel.text = data.title
         creatorLabel.text = data.creator
+        imgURL = data.imageURL
     }
 }

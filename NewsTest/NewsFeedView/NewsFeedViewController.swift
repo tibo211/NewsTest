@@ -30,12 +30,32 @@ class NewsFeedViewController: UIViewController {
             self.filteredArticleIDs = DatabaseManager.getArticleIDs(byCategory: category)
             
             self.newsFeedTableView.reloadData()
+            
+            DatabaseManager.articles
+                .filter{self.filteredArticleIDs.contains($0.key)}
+                .map{ $0.value.imageURL }
+                .forEach{
+                    ImageService.getImage(withURL: $0, completion: { (url, image) in
+                        if image != nil {
+                            self.loadImage(url: url, image: image!)
+                        }
+                    })
+            }
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         newsFeedTableView.delegate = self
         newsFeedTableView.dataSource = self
+    }
+    
+    func loadImage(url:String,image:UIImage){
+        for cell in newsFeedTableView.visibleCells {
+            let cell = cell as! ArticleCell
+            if cell.imgURL == url {
+                cell.articleImageView.image = image
+            }
+        }
     }
 
 }
