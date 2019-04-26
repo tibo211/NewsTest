@@ -17,6 +17,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="exD-1a-aBc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="szW-SB-0W0" kind="relationship" relationship="rootViewController" id="MDR-n7-wQJ"/>
@@ -33,14 +34,28 @@
                     <view key="view" contentMode="scaleToFill" id="UHe-vc-VnP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lko-IW-ukv" customClass="MenuBarView" customModule="NewsTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nBa-fM-Yt7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lko-IW-ukv" firstAttribute="top" secondItem="2XM-ee-v6y" secondAttribute="top" id="Dm2-Up-XmR"/>
+                            <constraint firstItem="lko-IW-ukv" firstAttribute="leading" secondItem="2XM-ee-v6y" secondAttribute="leading" id="ae8-ug-qq6"/>
+                            <constraint firstItem="2XM-ee-v6y" firstAttribute="trailing" secondItem="lko-IW-ukv" secondAttribute="trailing" id="j0c-AE-kOw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2XM-ee-v6y"/>
                     </view>
                     <navigationItem key="navigationItem" title="News Feed" id="OG9-nt-qXQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cth-gi-vTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="582"/>
+            <point key="canvasLocation" x="389.85507246376812" y="581.25"/>
         </scene>
     </scenes>
 </document>
