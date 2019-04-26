@@ -14,6 +14,7 @@ class MenuBarView: UIView {
         collectionView.delegate = self
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isScrollEnabled = true
+        collectionView.allowsSelection = true
         return collectionView
     }()
     
@@ -48,14 +49,13 @@ class MenuBarView: UIView {
 extension MenuBarView:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //TODO: return the actual number of items
-        return 5
+        return DatabaseManager.sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: menuItemID, for: indexPath) as! MenuBarItem
         cell.deselectMenuItem()
-        //TODO: set actual text
-        
+        cell.set(text: DatabaseManager.sections[indexPath.item])
         return cell
     }
 }

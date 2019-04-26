@@ -10,6 +10,8 @@
 		217DCCED817A19E9CF810061 /* Pods_NewsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77305082761374B8D869CB83 /* Pods_NewsTestTests.framework */; };
 		DC055D1CF3943A99CD89EBBD /* Pods_NewsTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E90F54D29E3FF7E1F41B867 /* Pods_NewsTestUITests.framework */; };
 		DD6FAB1A22731155007EC7C6 /* MenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6FAB1922731155007EC7C6 /* MenuBarItem.swift */; };
+		DD7FE3E02273348A002542C1 /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7FE3DF2273348A002542C1 /* ArticleData.swift */; };
+		DD7FE3E2227338C8002542C1 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7FE3E1227338C8002542C1 /* DatabaseManager.swift */; };
 		DD9CA1F122723F0C00B96073 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CA1F022723F0C00B96073 /* AppDelegate.swift */; };
 		DD9CA1F322723F0C00B96073 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CA1F222723F0C00B96073 /* NewsFeedViewController.swift */; };
 		DD9CA1F622723F0C00B96073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9CA1F422723F0C00B96073 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		CD3430135E6480669EF2D94D /* Pods_NewsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A6B41690120FB41196B11F /* Pods-NewsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTestTests.release.xcconfig"; path = "Target Support Files/Pods-NewsTestTests/Pods-NewsTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD6FAB1922731155007EC7C6 /* MenuBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarItem.swift; sourceTree = "<group>"; };
+		DD7FE3DF2273348A002542C1 /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
+		DD7FE3E1227338C8002542C1 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		DD9CA1ED22723F0C00B96073 /* NewsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9CA1F022723F0C00B96073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD9CA1F222723F0C00B96073 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD7FE3DE2273346C002542C1 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				DD7FE3DF2273348A002542C1 /* ArticleData.swift */,
+				DD7FE3E1227338C8002542C1 /* DatabaseManager.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
 		DD9CA1E422723F0C00B96073 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		DD9CA1EF22723F0C00B96073 /* NewsTest */ = {
 			isa = PBXGroup;
 			children = (
+				DD7FE3DE2273346C002542C1 /* DatabaseManager */,
 				DD9CA2242272628500B96073 /* NewsFeedView */,
 				DD9CA1F022723F0C00B96073 /* AppDelegate.swift */,
 				DD9CA1F422723F0C00B96073 /* Main.storyboard */,
@@ -415,6 +429,8 @@
 			files = (
 				DD9CA2232272615900B96073 /* MenuBarView.swift in Sources */,
 				DD6FAB1A22731155007EC7C6 /* MenuBarItem.swift in Sources */,
+				DD7FE3E2227338C8002542C1 /* DatabaseManager.swift in Sources */,
+				DD7FE3E02273348A002542C1 /* ArticleData.swift in Sources */,
 				DD9CA1F322723F0C00B96073 /* NewsFeedViewController.swift in Sources */,
 				DD9CA1F122723F0C00B96073 /* AppDelegate.swift in Sources */,
 			);

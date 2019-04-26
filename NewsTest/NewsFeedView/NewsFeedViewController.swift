@@ -15,7 +15,10 @@ class NewsFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        menuBarView.menuCollectionView.allowsSelection = true
+        DatabaseManager.loadArticles {
+            self.menuBarView.menuCollectionView.reloadData()
+            print("finished loading")
+        }
     }
 
 }
