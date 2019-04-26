@@ -1,14 +1,15 @@
 import UIKit
 
 class MenuBarView: UIView {
-    let edgeInset:CGFloat = 400
+    
+    let menuItemID = "menuItem"
     
     lazy var menuCollectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.showsHorizontalScrollIndicator = false
@@ -29,7 +30,7 @@ class MenuBarView: UIView {
     }
     
     func setupView(){
-        menuCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "newsType")
+        menuCollectionView.register(MenuBarItem.self, forCellWithReuseIdentifier: menuItemID)
         
         //add the menuCollectionView to the menu bar
         addSubview(menuCollectionView)
@@ -51,13 +52,30 @@ extension MenuBarView:UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "newsType", for: indexPath)
-        cell.backgroundColor = .white
+        let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: menuItemID, for: indexPath) as! MenuBarItem
+        cell.deselectMenuItem()
+        //TODO: set actual text
+        
         return cell
     }
 }
 
 extension MenuBarView:UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! MenuBarItem
+        cell.selectMenuItem()
+        menuCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! MenuBarItem
+        cell.deselectMenuItem()
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollItemToCenter()
@@ -76,26 +94,38 @@ extension MenuBarView:UICollectionViewDelegate {
         //calculate the center position of the scroll view
         let centerPosition = menuCollectionView.contentOffset.x + bounds.width/2
         
+        //deselect menu items
+        menuCollectionView.visibleCells.forEach{ ($0 as! MenuBarItem).deselectMenuItem() }
+        
         //find the closest item in the collection view to the center
-        let closeToCenterItem = menuCollectionView.visibleCells.min { (cell1, cell2) -> Bool in
-            return abs(cell1.center.x - centerPosition) < abs(cell2.center.x - centerPosition)
-        }
+        let closeToCenterItem = menuCollectionView.visibleCells.min { abs($0.center.x - centerPosition) < abs($1.center.x - centerPosition)}
         
         //if we found anyting get the position of the item and scroll the view to the item
         if closeToCenterItem != nil {
             guard let indexPath = menuCollectionView.indexPath(for: closeToCenterItem!) else { return }
             
-            menuCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            //select menu item
+            (closeToCenterItem! as! MenuBarItem).selectMenuItem()
+            menuCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+            //TODO: select center item
         }
     }
 }
 
 extension MenuBarView:UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 50)
+    
+    //set the size for a cell in the collection view
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
+        UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: bounds.width/3, height: 50)
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: bounds.width/2 - 100, bottom: 0, right:  bounds.width/2 - 100)
+       return UIEdgeInsets(top: 0,
+                           left: bounds.width/2 - bounds.width/6,
+                           bottom: 0,
+                           right: bounds.width/2 - bounds.width/6)
     }
 }

@@ -10,10 +10,12 @@ import UIKit
 
 class NewsFeedViewController: UIViewController {
     
+    @IBOutlet weak var menuBarView: MenuBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        menuBarView.menuCollectionView.allowsSelection = true
     }
 
 }

@@ -30,7 +30,7 @@
         <!--News Feed-->
         <scene sceneID="5ol-5y-L7A">
             <objects>
-                <viewController id="szW-SB-0W0" sceneMemberID="viewController">
+                <viewController id="szW-SB-0W0" customClass="NewsFeedViewController" customModule="NewsTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UHe-vc-VnP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,6 +52,9 @@
                         <viewLayoutGuide key="safeArea" id="2XM-ee-v6y"/>
                     </view>
                     <navigationItem key="navigationItem" title="News Feed" id="OG9-nt-qXQ"/>
+                    <connections>
+                        <outlet property="menuBarView" destination="lko-IW-ukv" id="CUC-RU-327"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cth-gi-vTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
