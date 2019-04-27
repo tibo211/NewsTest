@@ -11,6 +11,9 @@ import UIKit
 class SlideInViewController: UIViewController {
     
     @IBOutlet weak var handleArea: UIView!
+    @IBOutlet weak var commentedArticleTableView: UITableView!
+    
+    var commentedArticles:[String] = []
     
     enum SlideInState {
         case collapsed

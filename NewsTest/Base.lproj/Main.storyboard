@@ -118,7 +118,7 @@
                         <outlet property="menuBarView" destination="lko-IW-ukv" id="CUC-RU-327"/>
                         <outlet property="newsFeedTableView" destination="KHt-I4-t0v" id="JcL-Z5-h9n"/>
                         <segue destination="RlK-Wy-K6j" kind="show" identifier="showArticleDetail" id="bW1-22-8sF"/>
-                        <segue destination="61p-79-4pa" kind="show" id="8uV-dp-rH6"/>
+                        <segue destination="61p-79-4pa" kind="show" identifier="showComments" id="8uV-dp-rH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cth-gi-vTA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -54,6 +54,7 @@ class NewsFeedViewController: UIViewController {
         DatabaseManager.loadArticles {
             self.menuBarView.selectedIndex = -1
             self.menuBarView.categoryCollectionView.reloadData()
+            self.slideInViewController.updateCommentViewList()
         }
         
         menuBarView.updateTableView = {

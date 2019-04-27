@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideInViewController" customModule="NewsTest" customModuleProvider="target">
             <connections>
+                <outlet property="commentedArticleTableView" destination="y7v-j4-m1D" id="Vz7-uj-C6n"/>
                 <outlet property="handleArea" destination="kRi-3q-3Bs" id="sCr-hS-6uC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,6 +42,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y7v-j4-m1D">
                     <rect key="frame" x="0.0" y="40" width="320" height="528"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="r5n-1v-EIC"/>
+                        <outlet property="delegate" destination="-1" id="WgZ-WD-1C9"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
