@@ -16,7 +16,7 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let articleData = DatabaseManager.articles[filteredArticleIDs[indexPath.row]] else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID) as! ArticleCell
-        
+        cell.backgroundColor = .clear
         cell.set(withData: articleData)
         
         return cell

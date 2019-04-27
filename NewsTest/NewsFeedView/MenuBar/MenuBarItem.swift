@@ -50,6 +50,6 @@ class MenuBarItem: UICollectionViewCell {
     
     func selectMenuItem(){
         labelView.font = UIFont.boldSystemFont(ofSize: 30)
-        labelView.textColor = .black
+        labelView.textColor = .white
     }
 }

@@ -15,6 +15,8 @@ struct ArticleData {
     let content:String
     let category:String
     let creation_date:Date
+    
+    let comments:[String]
  
     init(article:[String:AnyObject]) {
         title = article["title"] as? String ?? ""
@@ -23,6 +25,13 @@ struct ArticleData {
         content = article["content"] as? String ?? ""
         category = article["category"] as? String ?? ""
         
+        let commentDic = article["comments"] as? [String:String] ?? nil
+        
+        if commentDic != nil {
+            comments = Array(commentDic!.values)
+        } else {
+            comments = []
+        }
         
         let dateFormatter = DateFormatter()
         //standard format

@@ -39,14 +39,17 @@ class NewsFeedViewController: UIViewController {
         //setup slideInViewController which contains the comment table
         addChild(slideInViewController)
         view.addSubview(slideInViewController.view)
-        slideInViewController.view.frame = CGRect(x: 0,
-                                                  y: view.frame.height - SlideInViewController.handleHeight,
-                                                  width: view.bounds.width,
-                                                  height: SlideInViewController.viewHeight)
+        slideInViewController.view.frame =
+            CGRect(x: 0,
+                   y: view.frame.height - SlideInViewController.handleHeight,
+                   width: view.bounds.width,
+                   height: SlideInViewController.viewHeight)
         slideInViewController.parentFrameHeight = view.frame.height
         slideInViewController.parentEffectView = visualEffectView
+        SlideInViewController.viewHeight = newsFeedTableView.frame.height + menuBarView.frame.height + 40
         
         newsFeedTableView.rowHeight = newsFeedTableView.bounds.width / 2
+        newsFeedTableView.backgroundColor = .clear
         
         DatabaseManager.loadArticles {
             self.menuBarView.selectedIndex = -1

@@ -22,24 +22,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRi-3q-3Bs" userLabel="HandleArea">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFa-Ka-BBQ">
-                            <rect key="frame" x="119.5" y="10" width="81" height="21"/>
+                            <rect key="frame" x="119.5" y="9.5" width="81" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.173940599" green="0.24193984269999999" blue="0.31265199179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="iFa-Ka-BBQ" firstAttribute="centerX" secondItem="kRi-3q-3Bs" secondAttribute="centerX" id="IAx-AZ-MDK"/>
-                        <constraint firstAttribute="height" constant="41" id="JO5-zp-GRB"/>
+                        <constraint firstAttribute="height" constant="40" id="JO5-zp-GRB"/>
                         <constraint firstItem="iFa-Ka-BBQ" firstAttribute="centerY" secondItem="kRi-3q-3Bs" secondAttribute="centerY" id="m8K-bj-qjS"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y7v-j4-m1D">
-                    <rect key="frame" x="0.0" y="41" width="320" height="527"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
