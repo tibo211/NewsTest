@@ -22,7 +22,7 @@ extension SlideInViewController:UITableViewDataSource {
         let article = DatabaseManager.articles[commentedArticles[indexPath.row]]
         var cell = tableView.dequeueReusableCell(withIdentifier: "commentArticleCell")
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "commentArticleCell")
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "commentArticleCell")
         }
         
         cell!.textLabel?.text = article!.title
