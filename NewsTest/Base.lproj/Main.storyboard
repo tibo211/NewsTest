@@ -110,16 +110,17 @@
                     <connections>
                         <outlet property="menuBarView" destination="lko-IW-ukv" id="CUC-RU-327"/>
                         <outlet property="newsFeedTableView" destination="KHt-I4-t0v" id="JcL-Z5-h9n"/>
+                        <segue destination="RlK-Wy-K6j" kind="show" identifier="showArticleDetail" id="bW1-22-8sF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cth-gi-vTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="366" y="581"/>
         </scene>
-        <!--View Controller-->
+        <!--Article-->
         <scene sceneID="6u5-At-c3J">
             <objects>
-                <viewController id="RlK-Wy-K6j" sceneMemberID="viewController">
+                <viewController title="Article" automaticallyAdjustsScrollViewInsets="NO" id="RlK-Wy-K6j" customClass="ArticleViewController" customModule="NewsTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ht-wu-NeO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llo-HS-fHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="393"/>
+            <point key="canvasLocation" x="1286" y="236"/>
         </scene>
     </scenes>
 </document>

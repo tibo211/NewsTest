@@ -16,6 +16,8 @@ class NewsFeedViewController: UIViewController {
     var filteredArticleIDs:[String] = []
     let cellID = "articleCellID"
     
+    var selectedArticleIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,9 +80,19 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let articleID = filteredArticleIDs[indexPath.row]
+        //should not stay selected
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedArticleIndex = indexPath.row
+        performSegue(withIdentifier: "showArticleDetail", sender: self)
+    }
     
-        present(UIViewController(), animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? ArticleViewController {
+            let articleID = filteredArticleIDs[selectedArticleIndex]
+            guard let article = DatabaseManager.articles[articleID] else { return }
+            destination.set(article)
+        }
     }
 }
 
