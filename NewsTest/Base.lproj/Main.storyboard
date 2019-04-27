@@ -132,28 +132,13 @@
                     <view key="view" contentMode="scaleToFill" id="1Fg-jg-CYn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-Ef-M4D">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="yuF-2z-zat" firstAttribute="trailing" secondItem="2QQ-Ef-M4D" secondAttribute="trailing" id="5CL-IP-EIo"/>
-                            <constraint firstItem="2QQ-Ef-M4D" firstAttribute="leading" secondItem="yuF-2z-zat" secondAttribute="leading" id="EdW-y7-LDh"/>
-                            <constraint firstItem="yuF-2z-zat" firstAttribute="bottom" secondItem="2QQ-Ef-M4D" secondAttribute="bottom" id="eRi-4Y-v8h"/>
-                            <constraint firstItem="2QQ-Ef-M4D" firstAttribute="top" secondItem="yuF-2z-zat" secondAttribute="top" id="g6C-c2-k1N"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yuF-2z-zat"/>
                     </view>
-                    <connections>
-                        <outlet property="commentsTableView" destination="2QQ-Ef-M4D" id="yhP-uR-c9S"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYu-4g-4Za" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="954"/>
+            <point key="canvasLocation" x="1282.5" y="953.87323943661977"/>
         </scene>
         <!--Article-->
         <scene sceneID="6u5-At-c3J">

@@ -9,7 +9,8 @@
 import UIKit
 
 class CommentsViewController: UIViewController {
-    @IBOutlet weak var commentsTableView: UITableView!
+    
+    var comments:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
