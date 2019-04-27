@@ -5,6 +5,8 @@ class MenuBarView: UIView {
     let menuItemID = "menuItem"
     var updateTableView:((_ category:String)->())? = nil
     
+    var selectedIndex:Int = -1
+    
     lazy var categoryCollectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -45,6 +47,8 @@ class MenuBarView: UIView {
             categoryCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor)])
     }
     
+    
+    
 }
 
 extension MenuBarView:UICollectionViewDataSource {
@@ -54,7 +58,15 @@ extension MenuBarView:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: menuItemID, for: indexPath) as! MenuBarItem
-        cell.deselectMenuItem()
+       
+        if selectedIndex == -1 {
+            cell.selectMenuItem()
+            selectedIndex = 0
+            updateNewsFeed(index: 0)
+        } else {
+            cell.deselectMenuItem()
+        }
+        
         cell.set(text: DatabaseManager.sections[indexPath.item])
         return cell
     }

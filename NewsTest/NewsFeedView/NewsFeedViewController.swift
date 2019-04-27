@@ -22,6 +22,7 @@ class NewsFeedViewController: UIViewController {
         newsFeedTableView.rowHeight = newsFeedTableView.bounds.width / 2
         
         DatabaseManager.loadArticles {
+            self.menuBarView.selectedIndex = -1
             self.menuBarView.categoryCollectionView.reloadData()
         }
         
@@ -42,6 +43,8 @@ class NewsFeedViewController: UIViewController {
                     })
             }
         }
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +77,11 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let articleID = filteredArticleIDs[indexPath.row]
     
+        present(UIViewController(), animated: true, completion: nil)
+    }
 }
 
 

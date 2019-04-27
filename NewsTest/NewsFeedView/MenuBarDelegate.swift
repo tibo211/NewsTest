@@ -45,9 +45,6 @@ extension MenuBarView:UICollectionViewDelegate {
         //calculate the center position of the scroll view
         let centerPosition = categoryCollectionView.contentOffset.x + bounds.width/2
         
-        //deselect menu items
-        categoryCollectionView.visibleCells.forEach{ ($0 as! MenuBarItem).deselectMenuItem() }
-        
         //find the closest item in the collection view to the center
         let closeToCenterItem = categoryCollectionView.visibleCells.min {
             abs($0.center.x - centerPosition) < abs($1.center.x - centerPosition)
@@ -62,16 +59,26 @@ extension MenuBarView:UICollectionViewDelegate {
         }
     }
     
-    func selectItem(_ indexPath:IndexPath) {
-        let cell = categoryCollectionView.cellForItem(at: indexPath) as! MenuBarItem
-        cell.selectMenuItem()
-        categoryCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+    func updateNewsFeed(index:Int){
         guard let updateTable = updateTableView else {
             print("not initialized")
             return
         }
-        let selectedCategory = DatabaseManager.sections[indexPath.item]
+        let selectedCategory = DatabaseManager.sections[index]
         
         updateTable(selectedCategory)
+    }
+    
+    func selectItem(_ indexPath:IndexPath) {
+        //deselect menu items
+        categoryCollectionView.visibleCells.forEach{ ($0 as! MenuBarItem).deselectMenuItem() }
+        
+        let cell = categoryCollectionView.cellForItem(at: indexPath) as! MenuBarItem
+        cell.selectMenuItem()
+        selectedIndex = indexPath.item
+        
+        categoryCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        
+        updateNewsFeed(index: indexPath.item)
     }
 }
