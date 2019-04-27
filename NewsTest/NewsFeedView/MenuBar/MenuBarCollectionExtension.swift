@@ -54,15 +54,13 @@ extension MenuBarView:UICollectionViewDelegate {
         if closeToCenterItem != nil {
             guard let indexPath = categoryCollectionView.indexPath(for: closeToCenterItem!) else { return }
             
-            //select menu item
             selectItem(indexPath)
         }
     }
     
     func updateNewsFeed(index:Int){
         guard let updateTable = updateTableView else {
-            print("not initialized")
-            return
+            fatalError("update callback is not initialized")
         }
         let selectedCategory = DatabaseManager.sections[index]
         
@@ -73,10 +71,12 @@ extension MenuBarView:UICollectionViewDelegate {
         //deselect menu items
         categoryCollectionView.visibleCells.forEach{ ($0 as! MenuBarItem).deselectMenuItem() }
         
+        //get the cell for indexPath and select it
         let cell = categoryCollectionView.cellForItem(at: indexPath) as! MenuBarItem
         cell.selectMenuItem()
         selectedIndex = indexPath.item
         
+        //scroll to item
         categoryCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         
         updateNewsFeed(index: indexPath.item)
