@@ -31,6 +31,8 @@
 		DDBDB0A72274E39F0027A782 /* SlideInAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0A62274E39F0027A782 /* SlideInAnimationExtension.swift */; };
 		DDBDB0A92274F37F0027A782 /* CommentsTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0A82274F37F0027A782 /* CommentsTableViewExtension.swift */; };
 		DDBDB0AC227500FB0027A782 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */; };
+		DDBDB0B52275085A0027A782 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0B32275085A0027A782 /* CommentViewCell.swift */; };
+		DDBDB0B62275085A0027A782 /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBDB0B42275085A0027A782 /* CommentViewCell.xib */; };
 		E5D955288BC912469A032D54 /* Pods_NewsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3430135E6480669EF2D94D /* Pods_NewsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		DDBDB0A62274E39F0027A782 /* SlideInAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInAnimationExtension.swift; sourceTree = "<group>"; };
 		DDBDB0A82274F37F0027A782 /* CommentsTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewExtension.swift; sourceTree = "<group>"; };
 		DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		DDBDB0B32275085A0027A782 /* CommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
+		DDBDB0B42275085A0027A782 /* CommentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewCell.xib; sourceTree = "<group>"; };
 		EDAE48A932F8D216666C5565 /* Pods-NewsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTest.debug.xcconfig"; path = "Target Support Files/Pods-NewsTest/Pods-NewsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F16907030A07A37C2F33690F /* Pods-NewsTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTestUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsTestUITests/Pods-NewsTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */,
+				DDBDB0B32275085A0027A782 /* CommentViewCell.swift */,
+				DDBDB0B42275085A0027A782 /* CommentViewCell.xib */,
 			);
 			path = CommentsView;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 			files = (
 				DD9CA1FB22723F0C00B96073 /* LaunchScreen.storyboard in Resources */,
 				DD9CA21F22724E3300B96073 /* GoogleService-Info.plist in Resources */,
+				DDBDB0B62275085A0027A782 /* CommentViewCell.xib in Resources */,
 				DD9CA1F822723F0C00B96073 /* Assets.xcassets in Resources */,
 				DD9CA1F622723F0C00B96073 /* Main.storyboard in Resources */,
 				DDBDB0A42274C9540027A782 /* SlideInViewController.xib in Resources */,
@@ -504,6 +511,7 @@
 				DDBDB0A92274F37F0027A782 /* CommentsTableViewExtension.swift in Sources */,
 				DDBDB09F2274C6590027A782 /* NewsFeedTableExtension.swift in Sources */,
 				DD9CA1F322723F0C00B96073 /* NewsFeedViewController.swift in Sources */,
+				DDBDB0B52275085A0027A782 /* CommentViewCell.swift in Sources */,
 				DD9CA1F122723F0C00B96073 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

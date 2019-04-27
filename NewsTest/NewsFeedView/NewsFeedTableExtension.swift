@@ -40,7 +40,7 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
         if let destination = segue.destination as? CommentsViewController {
             guard let articleID = selectedCommentsArticleID,
                 let comments = DatabaseManager.articles[articleID]?.comments else { return }
-            destination.comments = comments
+            destination.set(comments)
         }
     }
 }
