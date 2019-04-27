@@ -15,6 +15,8 @@ class SlideInViewController: UIViewController {
     
     var commentedArticles:[String] = []
     
+    var pushCommentsView:((_ articleID:String)->())?
+    
     enum SlideInState {
         case collapsed
         case expanded

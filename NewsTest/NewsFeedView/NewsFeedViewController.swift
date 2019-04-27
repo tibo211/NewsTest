@@ -14,6 +14,7 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var newsFeedTableView: UITableView!
     
     var filteredArticleIDs:[String] = []
+    var selectedCommentsArticleID:String?
     let cellID = "articleCellID"
     
     var selectedArticleIndex = 0
@@ -36,17 +37,7 @@ class NewsFeedViewController: UIViewController {
         visualEffectView.isUserInteractionEnabled = false
         view.addSubview(visualEffectView)
         
-        //setup slideInViewController which contains the comment table
-        addChild(slideInViewController)
-        view.addSubview(slideInViewController.view)
-        slideInViewController.view.frame =
-            CGRect(x: 0,
-                   y: view.frame.height - SlideInViewController.handleHeight,
-                   width: view.bounds.width,
-                   height: SlideInViewController.viewHeight)
-        slideInViewController.parentFrameHeight = view.frame.height
-        slideInViewController.parentEffectView = visualEffectView
-        SlideInViewController.viewHeight = newsFeedTableView.frame.height + menuBarView.frame.height + 40
+        setupSlideInView()
         
         newsFeedTableView.rowHeight = newsFeedTableView.bounds.width / 2
         newsFeedTableView.backgroundColor = .clear
@@ -87,6 +78,25 @@ class NewsFeedViewController: UIViewController {
             if cell.imgURL == url {
                 cell.articleImageView.image = image
             }
+        }
+    }
+    
+    func setupSlideInView(){
+        addChild(slideInViewController)
+        view.addSubview(slideInViewController.view)
+        slideInViewController.view.frame =
+            CGRect(x: 0,
+                   y: view.frame.height - SlideInViewController.handleHeight,
+                   width: view.bounds.width,
+                   height: SlideInViewController.viewHeight)
+        slideInViewController.parentFrameHeight = view.frame.height
+        slideInViewController.parentEffectView = visualEffectView
+        SlideInViewController.viewHeight = newsFeedTableView.frame.height + menuBarView.frame.height + 40
+        
+        slideInViewController.pushCommentsView = {
+            articleID in
+            self.selectedCommentsArticleID = articleID
+            self.performSegue(withIdentifier: "showComments", sender: self)
         }
     }
 }

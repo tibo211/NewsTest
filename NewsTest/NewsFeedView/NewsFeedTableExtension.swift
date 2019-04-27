@@ -36,5 +36,9 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
             guard let article = DatabaseManager.articles[articleID] else { return }
             destination.set(article)
         }
+        
+        if let destination = segue.destination as? CommentsViewController {
+            
+        }
     }
 }

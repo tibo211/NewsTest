@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SlideInViewController:UITableViewDataSource {
+extension SlideInViewController:UITableViewDataSource, UITableViewDelegate {
     func updateCommentViewList(){
         commentedArticles = Array(DatabaseManager.articles.filter{ $0.value.comments.count > 0 }.map{$0.key})
         commentedArticleTableView.reloadData()
@@ -30,5 +30,9 @@ extension SlideInViewController:UITableViewDataSource {
         return cell!
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let pushCommentsView = pushCommentsView else { return }
+        pushCommentsView(commentedArticles[indexPath.row])
+    }
 }

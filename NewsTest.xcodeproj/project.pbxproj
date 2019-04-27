@@ -30,6 +30,7 @@
 		DDBDB0A42274C9540027A782 /* SlideInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBDB0A22274C9540027A782 /* SlideInViewController.xib */; };
 		DDBDB0A72274E39F0027A782 /* SlideInAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0A62274E39F0027A782 /* SlideInAnimationExtension.swift */; };
 		DDBDB0A92274F37F0027A782 /* CommentsTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0A82274F37F0027A782 /* CommentsTableViewExtension.swift */; };
+		DDBDB0AC227500FB0027A782 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */; };
 		E5D955288BC912469A032D54 /* Pods_NewsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3430135E6480669EF2D94D /* Pods_NewsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		DDBDB0A22274C9540027A782 /* SlideInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideInViewController.xib; sourceTree = "<group>"; };
 		DDBDB0A62274E39F0027A782 /* SlideInAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInAnimationExtension.swift; sourceTree = "<group>"; };
 		DDBDB0A82274F37F0027A782 /* CommentsTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewExtension.swift; sourceTree = "<group>"; };
+		DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		EDAE48A932F8D216666C5565 /* Pods-NewsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTest.debug.xcconfig"; path = "Target Support Files/Pods-NewsTest/Pods-NewsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F16907030A07A37C2F33690F /* Pods-NewsTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTestUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsTestUITests/Pods-NewsTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +154,8 @@
 		DD9CA1EF22723F0C00B96073 /* NewsTest */ = {
 			isa = PBXGroup;
 			children = (
-				DDBDB0A02274C7320027A782 /* CommentsArticleView */,
+				DDBDB0AA2275008F0027A782 /* CommentsView */,
+				DDBDB0A02274C7320027A782 /* CommentsList */,
 				DDBDB09922745D9D0027A782 /* ArticleView */,
 				DD7FE3DE2273346C002542C1 /* DatabaseManager */,
 				DD9CA2242272628500B96073 /* NewsFeedView */,
@@ -203,7 +206,7 @@
 			path = ArticleView;
 			sourceTree = "<group>";
 		};
-		DDBDB0A02274C7320027A782 /* CommentsArticleView */ = {
+		DDBDB0A02274C7320027A782 /* CommentsList */ = {
 			isa = PBXGroup;
 			children = (
 				DDBDB0A12274C9540027A782 /* SlideInViewController.swift */,
@@ -211,7 +214,7 @@
 				DDBDB0A62274E39F0027A782 /* SlideInAnimationExtension.swift */,
 				DDBDB0A82274F37F0027A782 /* CommentsTableViewExtension.swift */,
 			);
-			path = CommentsArticleView;
+			path = CommentsList;
 			sourceTree = "<group>";
 		};
 		DDBDB0A52274D1290027A782 /* MenuBar */ = {
@@ -222,6 +225,14 @@
 				DD7FE3E322736FA0002542C1 /* MenuBarCollectionExtension.swift */,
 			);
 			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		DDBDB0AA2275008F0027A782 /* CommentsView */ = {
+			isa = PBXGroup;
+			children = (
+				DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */,
+			);
+			path = CommentsView;
 			sourceTree = "<group>";
 		};
 		E24204F70D41838DAD294D4F /* Frameworks */ = {
@@ -487,6 +498,7 @@
 				DD6FAB1A22731155007EC7C6 /* MenuBarItem.swift in Sources */,
 				DD7FE3E2227338C8002542C1 /* DatabaseManager.swift in Sources */,
 				DD7FE3E02273348A002542C1 /* ArticleData.swift in Sources */,
+				DDBDB0AC227500FB0027A782 /* CommentsViewController.swift in Sources */,
 				DDBDB09B22745DC10027A782 /* ArticleViewController.swift in Sources */,
 				DDBDB0A72274E39F0027A782 /* SlideInAnimationExtension.swift in Sources */,
 				DDBDB0A92274F37F0027A782 /* CommentsTableViewExtension.swift in Sources */,
