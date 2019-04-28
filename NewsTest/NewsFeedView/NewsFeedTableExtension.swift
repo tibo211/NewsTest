@@ -33,8 +33,7 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
         
         if let destination = segue.destination as? ArticleViewController {
             let articleID = filteredArticleIDs[selectedArticleIndex]
-            guard let article = DatabaseManager.articles[articleID] else { return }
-            destination.set(article)
+            destination.set(articleID)
         }
         
         if let destination = segue.destination as? CommentsViewController {

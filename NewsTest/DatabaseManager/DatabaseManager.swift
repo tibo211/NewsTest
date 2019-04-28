@@ -19,6 +19,10 @@ class DatabaseManager {
        return Database.database().reference()
     }()
     
+    static func add(comment: String, forArticle articleID:String) {
+        ref.child("news/\(articleID)/comments").childByAutoId().setValue(comment)
+    }
+    
     static func loadArticles(_ completion:@escaping ()->()){
         ref.child("news").observe(.value) { (snapshot) in
             let articleData = snapshot.value  as? [String:AnyObject] ?? [:]
