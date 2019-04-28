@@ -54,6 +54,7 @@ class NewsFeedViewController: UIViewController {
             self.filteredArticleIDs = DatabaseManager.getArticleIDs(byCategory: category)
             
             self.newsFeedTableView.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: { self.newsFeedTableView.setContentOffset(.zero, animated: false) })
             
             DatabaseManager.articles
                 .filter{self.filteredArticleIDs.contains($0.key)}
