@@ -19,6 +19,10 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .clear
         cell.set(withData: articleData)
         
+        if ImageService.downloadedImages.keys.contains(articleData.imageURL) {
+            cell.imageView?.image = ImageService.downloadedImages[articleData.imageURL]
+        }
+        
         return cell
     }
     
