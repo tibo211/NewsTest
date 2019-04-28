@@ -39,6 +39,11 @@ class RSSPopupView: UIView {
         layer.cornerRadius = 10
     }
     
+    @IBAction func onTouchCancel(_ sender: Any) {
+        state = .categorySelection
+        guard let dissmiss = articleIsUploaded else { return }
+        dissmiss()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         

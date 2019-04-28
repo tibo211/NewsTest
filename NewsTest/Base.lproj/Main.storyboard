@@ -149,18 +149,27 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jqE-2e-XoG">
-                            <rect key="frame" x="10" y="90" width="220" height="304"/>
+                            <rect key="frame" x="10" y="90" width="220" height="270"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-QO-hde">
+                            <rect key="frame" x="96" y="368" width="48" height="30"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="onTouchCancel:" destination="182-h0-Jfe" eventType="touchUpInside" id="Uv8-dy-rbx"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ONH-Sb-yWE" firstAttribute="top" secondItem="SR0-YW-de8" secondAttribute="top" constant="10" id="0bi-96-VbQ"/>
                         <constraint firstItem="ONH-Sb-yWE" firstAttribute="leading" secondItem="182-h0-Jfe" secondAttribute="leading" constant="10" id="1y7-C1-Mn2"/>
-                        <constraint firstItem="SR0-YW-de8" firstAttribute="bottom" secondItem="jqE-2e-XoG" secondAttribute="bottom" constant="10" id="RWc-Gf-m9c"/>
+                        <constraint firstItem="SR0-YW-de8" firstAttribute="bottom" secondItem="Wsb-QO-hde" secondAttribute="bottom" constant="6" id="9Uc-Fa-5wR"/>
+                        <constraint firstItem="Wsb-QO-hde" firstAttribute="centerX" secondItem="182-h0-Jfe" secondAttribute="centerX" id="DCk-A8-Gkk"/>
                         <constraint firstItem="jqE-2e-XoG" firstAttribute="top" secondItem="mRf-2a-eb9" secondAttribute="bottom" constant="10" id="VZV-65-hX4"/>
                         <constraint firstAttribute="trailing" secondItem="ONH-Sb-yWE" secondAttribute="trailing" constant="10" id="WaV-Gf-xFf"/>
                         <constraint firstItem="mRf-2a-eb9" firstAttribute="top" secondItem="ONH-Sb-yWE" secondAttribute="bottom" constant="10" id="XDo-Tb-J1T"/>
+                        <constraint firstItem="Wsb-QO-hde" firstAttribute="top" secondItem="jqE-2e-XoG" secondAttribute="bottom" constant="8" id="auX-f7-fEy"/>
                         <constraint firstItem="jqE-2e-XoG" firstAttribute="leading" secondItem="SR0-YW-de8" secondAttribute="leading" constant="10" id="crR-a0-FSd"/>
                         <constraint firstItem="mRf-2a-eb9" firstAttribute="centerX" secondItem="182-h0-Jfe" secondAttribute="centerX" id="fgm-YG-frV"/>
                         <constraint firstItem="SR0-YW-de8" firstAttribute="trailing" secondItem="jqE-2e-XoG" secondAttribute="trailing" constant="10" id="kab-bV-EXT"/>

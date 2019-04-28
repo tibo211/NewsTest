@@ -20,7 +20,7 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
         cell.set(withData: articleData)
         
         if ImageService.downloadedImages.keys.contains(articleData.imageURL) {
-            cell.imageView?.image = ImageService.downloadedImages[articleData.imageURL]
+            cell.articleImageView.image = ImageService.downloadedImages[articleData.imageURL]
         }
         
         return cell
