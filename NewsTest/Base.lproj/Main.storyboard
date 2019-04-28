@@ -113,7 +113,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2XM-ee-v6y"/>
                     </view>
-                    <navigationItem key="navigationItem" title="News Feed" id="OG9-nt-qXQ"/>
+                    <navigationItem key="navigationItem" title="News Feed" id="OG9-nt-qXQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HFB-Od-MrL">
+                            <connections>
+                                <action selector="onTouchAddRSSFeed:" destination="szW-SB-0W0" id="GfK-cE-p33"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuBarView" destination="lko-IW-ukv" id="CUC-RU-327"/>
                         <outlet property="newsFeedTableView" destination="KHt-I4-t0v" id="JcL-Z5-h9n"/>

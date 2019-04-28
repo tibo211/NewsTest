@@ -33,6 +33,8 @@
 		DDBDB0AC227500FB0027A782 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */; };
 		DDBDB0B52275085A0027A782 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0B32275085A0027A782 /* CommentViewCell.swift */; };
 		DDBDB0B62275085A0027A782 /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBDB0B42275085A0027A782 /* CommentViewCell.xib */; };
+		DDBDB0B92275E99C0027A782 /* RSSStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0B82275E99C0027A782 /* RSSStructs.swift */; };
+		DDBDB0BB2275EADD0027A782 /* RSSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0BA2275EADD0027A782 /* RSSManager.swift */; };
 		E5D955288BC912469A032D54 /* Pods_NewsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3430135E6480669EF2D94D /* Pods_NewsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		DDBDB0AB227500FB0027A782 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		DDBDB0B32275085A0027A782 /* CommentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
 		DDBDB0B42275085A0027A782 /* CommentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewCell.xib; sourceTree = "<group>"; };
+		DDBDB0B82275E99C0027A782 /* RSSStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSStructs.swift; sourceTree = "<group>"; };
+		DDBDB0BA2275EADD0027A782 /* RSSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSManager.swift; sourceTree = "<group>"; };
 		EDAE48A932F8D216666C5565 /* Pods-NewsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTest.debug.xcconfig"; path = "Target Support Files/Pods-NewsTest/Pods-NewsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F16907030A07A37C2F33690F /* Pods-NewsTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTestUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsTestUITests/Pods-NewsTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,7 @@
 		DD9CA1EF22723F0C00B96073 /* NewsTest */ = {
 			isa = PBXGroup;
 			children = (
+				DDBDB0B72275E8810027A782 /* RSSFeed */,
 				DDBDB0AA2275008F0027A782 /* CommentsView */,
 				DDBDB0A02274C7320027A782 /* CommentsList */,
 				DDBDB09922745D9D0027A782 /* ArticleView */,
@@ -239,6 +244,15 @@
 				DDBDB0B42275085A0027A782 /* CommentViewCell.xib */,
 			);
 			path = CommentsView;
+			sourceTree = "<group>";
+		};
+		DDBDB0B72275E8810027A782 /* RSSFeed */ = {
+			isa = PBXGroup;
+			children = (
+				DDBDB0B82275E99C0027A782 /* RSSStructs.swift */,
+				DDBDB0BA2275EADD0027A782 /* RSSManager.swift */,
+			);
+			path = RSSFeed;
 			sourceTree = "<group>";
 		};
 		E24204F70D41838DAD294D4F /* Frameworks */ = {
@@ -501,6 +515,8 @@
 				DDBDB0A32274C9540027A782 /* SlideInViewController.swift in Sources */,
 				DD9CA2232272615900B96073 /* MenuBarView.swift in Sources */,
 				DDBDB0982273C5340027A782 /* ImageService.swift in Sources */,
+				DDBDB0BB2275EADD0027A782 /* RSSManager.swift in Sources */,
+				DDBDB0B92275E99C0027A782 /* RSSStructs.swift in Sources */,
 				DD7FE3E422736FA0002542C1 /* MenuBarCollectionExtension.swift in Sources */,
 				DD6FAB1A22731155007EC7C6 /* MenuBarItem.swift in Sources */,
 				DD7FE3E2227338C8002542C1 /* DatabaseManager.swift in Sources */,

@@ -81,6 +81,10 @@ class NewsFeedViewController: UIViewController {
         }
     }
     
+    @IBAction func onTouchAddRSSFeed(_ sender: Any) {
+        //TODO: show RSSPopup
+    }
+    
     func setupSlideInView(){
         addChild(slideInViewController)
         view.addSubview(slideInViewController.view)
