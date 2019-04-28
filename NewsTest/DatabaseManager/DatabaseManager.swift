@@ -23,6 +23,12 @@ class DatabaseManager {
         ref.child("news/\(articleID)/comments").childByAutoId().setValue(comment)
     }
     
+    static func upload(_ article:RSSArticle, withCategory category:String) {
+        ref.child("news").childByAutoId().setValue(article.getFirebaseNode(category: category))
+        
+        
+    }
+    
     static func loadArticles(_ completion:@escaping ()->()){
         ref.child("news").observe(.value) { (snapshot) in
             let articleData = snapshot.value  as? [String:AnyObject] ?? [:]

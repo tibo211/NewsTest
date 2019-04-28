@@ -12,6 +12,7 @@ class NewsFeedViewController: UIViewController {
     
     @IBOutlet weak var menuBarView: MenuBarView!
     @IBOutlet weak var newsFeedTableView: UITableView!
+    @IBOutlet var popupView: RSSPopupView!
     
     var filteredArticleIDs:[String] = []
     var selectedCommentsArticleID:String?
@@ -83,6 +84,30 @@ class NewsFeedViewController: UIViewController {
     
     @IBAction func onTouchAddRSSFeed(_ sender: Any) {
         //TODO: show RSSPopup
+        view.addSubview(popupView)
+        
+        popupView.center = view.center
+        popupView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        popupView.alpha =  0
+        UIView.animate(withDuration: 0.5) {
+            if self.visualEffectView.effect == nil {
+                self.visualEffectView.effect = UIBlurEffect(style: .dark)
+            }
+            self.popupView.alpha = 1
+            self.popupView.transform = CGAffineTransform.identity
+        }
+        
+        popupView.articleIsUploaded = hidePopupView
+    }
+    
+    func hidePopupView(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.popupView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.popupView.alpha = 1
+            self.visualEffectView.effect = nil
+        }) { (success) in
+            self.popupView.removeFromSuperview()
+        }
     }
     
     func setupSlideInView(){

@@ -20,8 +20,8 @@ struct ArticleData {
  
     init(article:[String:AnyObject]) {
         title = article["title"] as? String ?? ""
-        creator = article["creator"] as? String ?? ""
-        imageURL = article["image"] as? String ?? ""
+        creator = article["author"] as? String ?? ""
+        imageURL = article["urlToImage"] as? String ?? ""
         content = article["content"] as? String ?? ""
         category = article["category"] as? String ?? ""
         
@@ -35,20 +35,16 @@ struct ArticleData {
         
         let dateFormatter = DateFormatter()
         //standard format
-        dateFormatter.dateFormat = "yyyy.MM.dd"
-        
-        //set the date to 2000.01.01 if it cannot formate
-        //because if Date is optional it can be a real pain when we need ordering
-        guard let dateString = article["creation"] as? String else {
-            creation_date = dateFormatter.date(from: "2000.01.01")!
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+     
+        guard let dateString = article["publishedAt"] as? String else {
+            creation_date = Date()
             return
         }
         guard let date = dateFormatter.date(from: dateString) else {
-            creation_date = dateFormatter.date(from: "2000.01.01")!
+           creation_date = Date()
             return
         }
-         
         creation_date = date
-
     }
 }

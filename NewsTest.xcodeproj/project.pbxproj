@@ -35,6 +35,7 @@
 		DDBDB0B62275085A0027A782 /* CommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBDB0B42275085A0027A782 /* CommentViewCell.xib */; };
 		DDBDB0B92275E99C0027A782 /* RSSStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0B82275E99C0027A782 /* RSSStructs.swift */; };
 		DDBDB0BB2275EADD0027A782 /* RSSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0BA2275EADD0027A782 /* RSSManager.swift */; };
+		DDBDB0BD2275F47F0027A782 /* RSSPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDB0BC2275F47F0027A782 /* RSSPopupView.swift */; };
 		E5D955288BC912469A032D54 /* Pods_NewsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3430135E6480669EF2D94D /* Pods_NewsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		DDBDB0B42275085A0027A782 /* CommentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewCell.xib; sourceTree = "<group>"; };
 		DDBDB0B82275E99C0027A782 /* RSSStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSStructs.swift; sourceTree = "<group>"; };
 		DDBDB0BA2275EADD0027A782 /* RSSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSManager.swift; sourceTree = "<group>"; };
+		DDBDB0BC2275F47F0027A782 /* RSSPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSPopupView.swift; sourceTree = "<group>"; };
 		EDAE48A932F8D216666C5565 /* Pods-NewsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTest.debug.xcconfig"; path = "Target Support Files/Pods-NewsTest/Pods-NewsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F16907030A07A37C2F33690F /* Pods-NewsTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsTestUITests.release.xcconfig"; path = "Target Support Files/Pods-NewsTestUITests/Pods-NewsTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 			children = (
 				DDBDB0B82275E99C0027A782 /* RSSStructs.swift */,
 				DDBDB0BA2275EADD0027A782 /* RSSManager.swift */,
+				DDBDB0BC2275F47F0027A782 /* RSSPopupView.swift */,
 			);
 			path = RSSFeed;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				DD7FE3E02273348A002542C1 /* ArticleData.swift in Sources */,
 				DDBDB0AC227500FB0027A782 /* CommentsViewController.swift in Sources */,
 				DDBDB09B22745DC10027A782 /* ArticleViewController.swift in Sources */,
+				DDBDB0BD2275F47F0027A782 /* RSSPopupView.swift in Sources */,
 				DDBDB0A72274E39F0027A782 /* SlideInAnimationExtension.swift in Sources */,
 				DDBDB0A92274F37F0027A782 /* CommentsTableViewExtension.swift in Sources */,
 				DDBDB09F2274C6590027A782 /* NewsFeedTableExtension.swift in Sources */,
