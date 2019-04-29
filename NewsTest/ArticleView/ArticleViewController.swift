@@ -25,6 +25,14 @@ class ArticleViewController:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
+        visualEffectView.isUserInteractionEnabled = false
+        visualEffectView.effect = nil
+        
+        popupView.layer.cornerRadius = 10
+    }
+    
+    func loadData(){
         guard let article = article else { return }
         titleLabel.text = article.title
         bodyTextView.text = article.content
@@ -38,17 +46,12 @@ class ArticleViewController:UIViewController {
                 self.articleImage.image = image!
             }
         }
-        visualEffectView.isUserInteractionEnabled = false
-        visualEffectView.effect = nil
-        
-        popupView.layer.cornerRadius = 10
     }
     
     func set(_ articleID:String){
         article = DatabaseManager.articles[articleID]
         self.articleID = articleID
     }
-    
    
     @IBAction func commentButton(_ sender: Any) {
         showPopupView()
@@ -68,7 +71,6 @@ class ArticleViewController:UIViewController {
             self.popupView.transform = CGAffineTransform.identity
         }
     }
-    
     
     @IBAction func touchDissmiss(_ sender: Any) {
         hidePopupView()

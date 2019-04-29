@@ -14,6 +14,8 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var newsFeedTableView: UITableView!
     @IBOutlet var popupView: RSSPopupView!
     
+    var updateArticleView:(()->())?
+    
     var filteredArticleIDs:[String] = []
     var selectedCommentsArticleID:String?
     let cellID = "articleCellID"
@@ -47,6 +49,9 @@ class NewsFeedViewController: UIViewController {
             self.menuBarView.selectedIndex = -1
             self.menuBarView.categoryCollectionView.reloadData()
             self.slideInViewController.updateCommentViewList()
+            if let updateArticleView = self.updateArticleView {
+                updateArticleView()
+            }
         }
         
         menuBarView.updateTableView = {

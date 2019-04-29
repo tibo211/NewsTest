@@ -34,10 +34,10 @@ extension NewsFeedViewController:UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let destination = segue.destination as? ArticleViewController {
             let articleID = filteredArticleIDs[selectedArticleIndex]
             destination.set(articleID)
+            self.updateArticleView = destination.loadData
         }
         
         if let destination = segue.destination as? CommentsViewController {
