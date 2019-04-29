@@ -31,8 +31,8 @@ class ImageService {
             }
             
             DispatchQueue.main.async {
-                if downloadedImages.keys.contains(urls){
-                    completion(urls, downloadedImages[urls])
+                if let downloadedImage = downloadedImages[urls] {
+                    completion(urls, downloadedImage)
                 } else {
                     completion(urls, nil)
                 }

@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KHt-I4-t0v">
-                                <rect key="frame" x="0.0" y="114" width="320" height="414"/>
+                                <rect key="frame" x="0.0" y="114" width="320" height="394"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -105,7 +105,7 @@
                         <constraints>
                             <constraint firstItem="lko-IW-ukv" firstAttribute="top" secondItem="2XM-ee-v6y" secondAttribute="top" id="Dm2-Up-XmR"/>
                             <constraint firstItem="KHt-I4-t0v" firstAttribute="top" secondItem="lko-IW-ukv" secondAttribute="bottom" id="RiF-3b-abE"/>
-                            <constraint firstItem="2XM-ee-v6y" firstAttribute="bottom" secondItem="KHt-I4-t0v" secondAttribute="bottom" constant="40" id="TJ8-m3-J54"/>
+                            <constraint firstAttribute="bottom" secondItem="KHt-I4-t0v" secondAttribute="bottom" constant="60" id="TJ8-m3-J54"/>
                             <constraint firstItem="lko-IW-ukv" firstAttribute="leading" secondItem="2XM-ee-v6y" secondAttribute="leading" id="ae8-ug-qq6"/>
                             <constraint firstItem="2XM-ee-v6y" firstAttribute="trailing" secondItem="KHt-I4-t0v" secondAttribute="trailing" id="feV-Ox-2Pb"/>
                             <constraint firstItem="2XM-ee-v6y" firstAttribute="trailing" secondItem="lko-IW-ukv" secondAttribute="trailing" id="j0c-AE-kOw"/>

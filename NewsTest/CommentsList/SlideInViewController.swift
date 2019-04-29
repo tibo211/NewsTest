@@ -35,7 +35,8 @@ class SlideInViewController: UIViewController {
     var animationProgressWhenInterrupted:CGFloat = 0
     
     static var viewHeight:CGFloat = 500
-    static var handleHeight:CGFloat = 40
+    static var handleHeight:CGFloat = 60
+    static var offset:CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
