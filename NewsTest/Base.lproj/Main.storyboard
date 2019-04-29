@@ -114,6 +114,11 @@
                         <viewLayoutGuide key="safeArea" id="2XM-ee-v6y"/>
                     </view>
                     <navigationItem key="navigationItem" title="News Feed" id="OG9-nt-qXQ">
+                        <barButtonItem key="leftBarButtonItem" title="comments" id="Bhg-J2-1ai">
+                            <connections>
+                                <action selector="onTouchComments:" destination="szW-SB-0W0" id="BAx-Gt-RIR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HFB-Od-MrL">
                             <connections>
                                 <action selector="onTouchAddRSSFeed:" destination="szW-SB-0W0" id="GfK-cE-p33"/>

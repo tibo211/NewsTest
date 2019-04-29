@@ -34,7 +34,6 @@ struct ArticleData {
         }
         
         let dateFormatter = DateFormatter()
-        //standard format
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
      
         guard let dateString = article["publishedAt"] as? String else {

@@ -16,7 +16,6 @@ class ArticleViewController:UIViewController {
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     @IBOutlet weak var popupTextView: UITextView!
-    
     @IBOutlet var popupView: UIView!
     
     var article:ArticleData?

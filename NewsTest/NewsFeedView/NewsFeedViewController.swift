@@ -116,6 +116,10 @@ class NewsFeedViewController: UIViewController {
         }
     }
     
+    @IBAction func onTouchComments(_ sender: Any) {
+        slideInViewController.animateTransition(duration: 1)
+    }
+    
     func setupSlideInView(){
         addChild(slideInViewController)
         view.addSubview(slideInViewController.view)
