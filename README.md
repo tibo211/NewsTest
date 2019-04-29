@@ -17,7 +17,7 @@ Ez az alkalmazás egy tesztfeladat
 * Csak annak a cikknek a címe jelenik meg amihez van komment. A cím alatt a kommentek száma látható.
 * Ha kiválasztunk egy kommentet megjelenik a komment nézet a cikk kommentjeivel
 
-<img src="https://github.com/tibo211/NewsTest/blob/master/Images/IMG_0300.jpg" alt="drawing" width="200"/>
+<img src="https://github.com/tibo211/NewsTest/blob/master/Images/IMG_0300.jpg" alt="drawing" width="200"/><img src="https://github.com/tibo211/NewsTest/blob/master/Images/IMG_0306.jpg" alt="drawing" width="200"/>
 
 ### Cikk nézet
 
