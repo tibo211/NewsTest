@@ -130,7 +130,7 @@ class NewsFeedViewController: UIViewController {
                    height: SlideInViewController.viewHeight)
         slideInViewController.parentFrameHeight = view.frame.height
         slideInViewController.parentEffectView = visualEffectView
-        SlideInViewController.viewHeight = newsFeedTableView.frame.height + menuBarView.frame.height + 40
+        SlideInViewController.viewHeight = newsFeedTableView.frame.height + menuBarView.frame.height + 60
         
         slideInViewController.pushCommentsView = {
             articleID in
