@@ -28,5 +28,4 @@ Ez az alkalmazás egy tesztfeladat
 ## Még ki nem javított hibák
 
 * Hírlistán interakcióba léphetünk a háttérelemekkel miközben azok el vannak homályosítva. Pld.: Rányomhatunk egy cikkre miközben elől van a komment lista vagy a felugró ablak.
-* A komment lista legfelső elemére rá lehet nyomni amikor lent van.
 * A komment lista és a felugró ablak megjelenhet egyszerre.
