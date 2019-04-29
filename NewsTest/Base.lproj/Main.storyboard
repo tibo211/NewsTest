@@ -233,7 +233,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NaY-oa-mig">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NaY-oa-mig">
                                 <rect key="frame" x="16" y="284.5" width="288" height="273.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Bit there is some more text. meybe the next sentence</string>
@@ -253,27 +253,30 @@
                                     <action selector="commentButton:" destination="RlK-Wy-K6j" eventType="touchUpInside" id="VYE-c5-p8p"/>
                                 </connections>
                             </button>
-                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2OD-8K-wFk">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sep-Fk-IZB">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Vax-sL-01Q">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i0Y-za-d95">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="dark"/>
+                                <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="sep-Fk-IZB" firstAttribute="top" secondItem="6MP-OU-QcK" secondAttribute="top" id="7Z4-bU-vW5"/>
                             <constraint firstItem="pR0-yU-9iZ" firstAttribute="leading" secondItem="6MP-OU-QcK" secondAttribute="leading" constant="16" id="DJK-XV-GKr"/>
                             <constraint firstItem="6MP-OU-QcK" firstAttribute="trailing" secondItem="pR0-yU-9iZ" secondAttribute="trailing" constant="16" id="Lcb-Om-mSn"/>
                             <constraint firstItem="sKR-Oz-kWW" firstAttribute="trailing" secondItem="6MP-OU-QcK" secondAttribute="trailing" id="Qp4-Ob-f9F"/>
                             <constraint firstItem="sKR-Oz-kWW" firstAttribute="top" secondItem="6MP-OU-QcK" secondAttribute="top" id="Tgg-y9-QHj"/>
                             <constraint firstItem="6MP-OU-QcK" firstAttribute="trailing" secondItem="NaY-oa-mig" secondAttribute="trailing" constant="16" id="UPn-rc-7uv"/>
                             <constraint firstItem="6MP-OU-QcK" firstAttribute="bottom" secondItem="NaY-oa-mig" secondAttribute="bottom" constant="10" id="V1u-hn-fLd"/>
+                            <constraint firstItem="6MP-OU-QcK" firstAttribute="bottom" secondItem="sep-Fk-IZB" secondAttribute="bottom" id="W6H-Te-Qkd"/>
                             <constraint firstItem="6MP-OU-QcK" firstAttribute="trailing" secondItem="iw6-ot-mBn" secondAttribute="trailing" constant="15" id="Wad-pK-fwv"/>
                             <constraint firstItem="pqR-RD-vTv" firstAttribute="top" secondItem="sKR-Oz-kWW" secondAttribute="bottom" constant="8" id="YK2-V0-Ls5"/>
+                            <constraint firstItem="6MP-OU-QcK" firstAttribute="trailing" secondItem="sep-Fk-IZB" secondAttribute="trailing" id="cN5-Gb-y7f"/>
                             <constraint firstItem="pqR-RD-vTv" firstAttribute="leading" secondItem="6MP-OU-QcK" secondAttribute="leading" constant="15" id="dII-W9-tgZ"/>
+                            <constraint firstItem="sep-Fk-IZB" firstAttribute="leading" secondItem="6MP-OU-QcK" secondAttribute="leading" id="ewc-Wx-BSz"/>
                             <constraint firstItem="NaY-oa-mig" firstAttribute="leading" secondItem="6MP-OU-QcK" secondAttribute="leading" constant="16" id="jSZ-0H-BYb"/>
                             <constraint firstItem="NaY-oa-mig" firstAttribute="top" secondItem="pR0-yU-9iZ" secondAttribute="bottom" constant="8" id="lFB-4h-cgt"/>
                             <constraint firstItem="iw6-ot-mBn" firstAttribute="top" secondItem="sKR-Oz-kWW" secondAttribute="bottom" constant="8" id="mjh-tr-WmB"/>
@@ -289,7 +292,7 @@
                         <outlet property="popupTextView" destination="OW1-FL-YhN" id="Rw3-se-O9a"/>
                         <outlet property="popupView" destination="Axr-AS-ye6" id="rrl-UN-4Jj"/>
                         <outlet property="titleLabel" destination="pR0-yU-9iZ" id="vaW-CE-q1Z"/>
-                        <outlet property="visualEffectView" destination="2OD-8K-wFk" id="hff-Ll-S7k"/>
+                        <outlet property="visualEffectView" destination="sep-Fk-IZB" id="Nzr-ht-sOn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llo-HS-fHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
