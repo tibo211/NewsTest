@@ -24,8 +24,3 @@ Ez az alkalmazás egy tesztfeladat
 * A komment gombra nyomva kommentelhetünk a cikkhez
 
 <img src="https://github.com/tibo211/NewsTest/blob/master/Images/IMG_0303.jpg" alt="drawing" width="200"/><img src="https://github.com/tibo211/NewsTest/blob/master/Images/IMG_0304.jpg" alt="drawing" width="200"/>
-
-## Még ki nem javított hibák
-
-* Hírlistán interakcióba léphetünk a háttérelemekkel miközben azok el vannak homályosítva. Pld.: Rányomhatunk egy cikkre miközben elől van a komment lista vagy a felugró ablak.
-* A komment lista és a felugró ablak megjelenhet egyszerre.
